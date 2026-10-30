@@ -1,0 +1,12 @@
+{
+  "text": {},
+  "media": {},
+  "theme": {},
+  "spacing": {},
+  "typography": {
+    "#projectContent > section.case-study__text-section:nth-of-type(1) > div.case-study__copy > p.visual-edit-hover:nth-of-type(1)": {
+      "color": "#fcfcfc",
+      "fontSize": "42px"
+    }
+  }
+}

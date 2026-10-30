@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Work — Alex Mercer</title>
+  <meta name="description" content="Selected UX/UI, branding, and motion graphics projects by Alex Mercer." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body class="work-listing">
+  <canvas class="liquid-cursor-canvas" id="heroLiquidCanvas" aria-hidden="true"></canvas>
+  <div class="cursor-follower" id="cursorFollower" aria-hidden="true"><span></span></div>
+
+  <div class="preloader" id="preloader" aria-hidden="true"><div class="preloader__bar"></div></div>
+
+  <header class="nav" id="nav" role="banner">
+    <div class="nav__inner">
+      <a href="/" class="nav__logo" aria-label="Home">Alex Mercer</a>
+      <button class="nav__toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navMenu">
+        <span class="nav__toggle-line"></span><span class="nav__toggle-line"></span>
+      </button>
+      <div class="nav__menu" id="navMenu" role="navigation">
+        <ul class="nav__links">
+          <li><a href="/work.html" class="nav__link" aria-current="page">Work</a></li>
+          <li><a href="/about.html" class="nav__link">About</a></li>
+          <li><a href="/index.html#contact" class="nav__link">Contact</a></li>
+        </ul>
+        <a href="/index.html#contact" class="nav__cta">Get in touch</a>
+      </div>
+    </div>
+  </header>
+
+  <main>  <!-- ============================================================
+       SELECTED WORKS
+       ============================================================ -->
+  <section class="works" id="work" aria-label="Selected Work Projects">
+    <div class="works__inner">
+      <div class="works__header">
+        <h2 class="works__title reveal-up">A closer look at the work I’ve helped shape</h2>
+        <p class="works__description reveal-up">Selected projects across product design, websites, systems and brand-led experiences — independently and as part of agency teams.</p>
+        <div class="works__filters reveal-up" role="group" aria-label="Filter projects by discipline">
+          <button class="works__filter is-active" type="button" data-work-filter="all" aria-pressed="true">
+            <svg class="works__filter-icon" viewBox="0 0 20 20" fill="none" aria-hidden="true"><rect x="2.5" y="2.5" width="6" height="6" rx="1"/><rect x="11.5" y="2.5" width="6" height="6" rx="1"/><rect x="2.5" y="11.5" width="6" height="6" rx="1"/><rect x="11.5" y="11.5" width="6" height="6" rx="1"/></svg>
+            <span>All</span>
+          </button>
+          <button class="works__filter" type="button" data-work-filter="ux-ui" aria-pressed="false">
+            <svg class="works__filter-icon" viewBox="0 0 20 20" fill="none" aria-hidden="true"><rect x="2.5" y="3" width="15" height="14" rx="2"/><path d="M2.5 7h15M6 5h.01M8.5 5h.01M6 10h3v4H6zM11.5 10H14M11.5 12h3M11.5 14h3"/></svg>
+            <span>UX/UI</span>
+          </button>
+          <button class="works__filter" type="button" data-work-filter="branding" aria-pressed="false">
+            <svg class="works__filter-icon" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="m10 2.5 2.1 5.4 5.4 2.1-5.4 2.1-2.1 5.4-2.1-5.4-5.4-2.1 5.4-2.1L10 2.5Z"/><circle cx="10" cy="10" r="2.1"/></svg>
+            <span>Branding</span>
+          </button>
+          <button class="works__filter" type="button" data-work-filter="motion-graphics" aria-pressed="false">
+            <svg class="works__filter-icon" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M7.5 5.5v9l7-4.5-7-4.5Z"/><path d="M3 7.5a7.5 7.5 0 0 1 12.8-3.2M17 12.5a7.5 7.5 0 0 1-12.8 3.2M15.8 1.8v3.7h-3.7M4.2 18.2v-3.7h3.7"/></svg>
+            <span>Motion Graphics</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="works__grid">
+
+        <!-- ——— Project 1 (full-width) ——— -->
+        <article class="project-card project-card--full reveal-up" data-category="ux-ui">
+          <a href="/projects/horizon-banking.html" class="project-card__link" aria-label="View Horizon Banking details">
+            <div class="project-card__image-wrap">
+              <div class="project-card__placeholder" style="--ph-hue: 220;">
+              </div>
+            </div>
+            <div class="project-card__info">
+              <div class="project-card__meta">
+                <span class="project-card__tag">UX/UI Design</span>
+                <span class="project-card__tag">Web App</span>
+                <span class="project-card__year">2024</span>
+              </div>
+              <h3 class="project-card__title">Horizon Banking</h3>
+              <p class="project-card__desc">Redesigned the entire digital banking experience for 2M+ users — streamlining onboarding, transaction flows, and account management into a clean, accessible interface.</p>
+            </div>
+            <div class="project-card__arrow" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+            </div>
+          </a>
+        </article>
+
+        <!-- ——— Project 2 & 3 (two-column row) ——— -->
+        <div class="works__row">
+          <article class="project-card reveal-up" data-category="ux-ui">
+            <a href="/projects/pulse-fitness.html" class="project-card__link" aria-label="View Pulse Fitness details">
+              <div class="project-card__image-wrap">
+                <div class="project-card__placeholder" style="--ph-hue: 280;">
+                </div>
+              </div>
+              <div class="project-card__info">
+                <div class="project-card__meta">
+                  <span class="project-card__tag">Product Design</span>
+                  <span class="project-card__tag">Mobile App</span>
+                  <span class="project-card__year">2024</span>
+                </div>
+                <h3 class="project-card__title">Pulse Fitness</h3>
+                <p class="project-card__desc">End-to-end design for a health & fitness tracking app with personalized workout plans, nutrition logging, and social challenges.</p>
+              </div>
+              <div class="project-card__arrow" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+              </div>
+            </a>
+          </article>
+
+          <article class="project-card reveal-up" data-category="branding">
+            <a href="/projects/verdant-botanics.html" class="project-card__link" aria-label="View Verdant Botanics details">
+              <div class="project-card__image-wrap">
+                <div class="project-card__placeholder" style="--ph-hue: 160;">
+                </div>
+              </div>
+              <div class="project-card__info">
+                <div class="project-card__meta">
+                  <span class="project-card__tag">Branding</span>
+                  <span class="project-card__tag">E-Commerce</span>
+                  <span class="project-card__year">2023</span>
+                </div>
+                <h3 class="project-card__title">Verdant Botanics</h3>
+                <p class="project-card__desc">Complete brand identity and Shopify storefront for a sustainable plant-care startup — from logo to checkout experience.</p>
+              </div>
+              <div class="project-card__arrow" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+              </div>
+            </a>
+          </article>
+        </div>
+
+        <!-- ——— Project 4 (full-width) ——— -->
+        <article class="project-card project-card--full reveal-up" data-category="ux-ui">
+          <a href="/projects/atlas-analytics.html" class="project-card__link" aria-label="View Atlas Analytics details">
+            <div class="project-card__image-wrap">
+              <div class="project-card__placeholder" style="--ph-hue: 20;">
+              </div>
+            </div>
+            <div class="project-card__info">
+              <div class="project-card__meta">
+                <span class="project-card__tag">UX/UI Design</span>
+                <span class="project-card__tag">SaaS Platform</span>
+                <span class="project-card__year">2023</span>
+              </div>
+              <h3 class="project-card__title">Atlas Analytics</h3>
+              <p class="project-card__desc">Designed a real-time data visualization platform for enterprise teams — interactive charts, custom report builder, and role-based dashboards serving 50k+ daily users.</p>
+            </div>
+            <div class="project-card__arrow" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+            </div>
+          </a>
+        </article>
+
+        <!-- ——— Project 5 & 6 (two-column row) ——— -->
+        <div class="works__row">
+          <article class="project-card reveal-up" data-category="branding motion-graphics">
+            <a href="/projects/neon-studios.html" class="project-card__link" aria-label="View Neon Studios details">
+              <div class="project-card__image-wrap">
+                <div class="project-card__placeholder" style="--ph-hue: 340;">
+                </div>
+              </div>
+              <div class="project-card__info">
+                <div class="project-card__meta">
+                  <span class="project-card__tag">Visual Direction</span>
+                  <span class="project-card__tag">Identity</span>
+                  <span class="project-card__year">2023</span>
+                </div>
+                <h3 class="project-card__title">Neon Studios</h3>
+                <p class="project-card__desc">Art direction and visual identity for a creative agency — logo system, typography guidelines, motion language, and brand collateral.</p>
+              </div>
+              <div class="project-card__arrow" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+              </div>
+            </a>
+          </article>
+
+          <article class="project-card reveal-up" data-category="ux-ui">
+            <a href="/projects/wanderlust-travel.html" class="project-card__link" aria-label="View Wanderlust Travel details">
+              <div class="project-card__image-wrap">
+                <div class="project-card__placeholder" style="--ph-hue: 50;">
+                </div>
+              </div>
+              <div class="project-card__info">
+                <div class="project-card__meta">
+                  <span class="project-card__tag">Web Design</span>
+                  <span class="project-card__tag">Development</span>
+                  <span class="project-card__year">2022</span>
+                </div>
+                <h3 class="project-card__title">Wanderlust Travel</h3>
+                <p class="project-card__desc">Responsive travel booking website with itinerary planning, hotel comparisons, and a seamless multi-step checkout flow.</p>
+              </div>
+              <div class="project-card__arrow" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+              </div>
+            </a>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  </main>
+  <footer class="footer work-page__footer" role="contentinfo">
+    <div class="footer__inner">
+      <div class="footer__divider"></div>
+      <div class="footer__bottom">
+        <div class="footer__col footer__col--copy">
+          <p>Designed &amp; built by Alex Mercer</p>
+        </div>
+        <div class="footer__col footer__col--social">
+          <div class="footer__social-links">
+            <a href="https://linkedin.com" class="footer__social-link" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a href="https://behance.net" class="footer__social-link" target="_blank" rel="noopener noreferrer">Behance</a>
+            <a href="https://dribbble.com" class="footer__social-link" target="_blank" rel="noopener noreferrer">Dribbble</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
+  <script type="module" src="/js/main.js"></script>
+  <script type="module" src="/js/project-catalog.js"></script>
+  <script type="module" src="/js/liquid-trail.js"></script>
+  <script type="module" src="/js/apply-visual-edits.js"></script>
+  <script type="module" src="/js/visual-editor-frame.js"></script>
+</body>
+</html>

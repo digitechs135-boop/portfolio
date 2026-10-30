@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#111214" />
+  <title>Visual Editor — Alex Mercer Portfolio</title>
+  <link rel="stylesheet" href="/css/editor.css" />
+</head>
+<body>
+  <div class="editor-shell">
+    <header class="editor-topbar">
+      <a class="editor-brand" href="/" target="_blank" rel="noreferrer">Portfolio <span>Visual editor</span></a>
+      <label class="page-picker" for="pageSelect">
+        <span>PAGE</span>
+        <select id="pageSelect" aria-label="Choose a page to edit"></select>
+      </label>
+      <div class="editor-tools" role="toolbar" aria-label="Editing tools">
+        <button class="tool-button is-active" type="button" data-mode="text">Edit text</button>
+        <button class="tool-button" type="button" data-mode="media">Replace image</button>
+        <button class="tool-button" type="button" data-mode="spacing">Section spacing</button>
+      </div>
+      <div class="editor-actions">
+        <button class="action-button" id="undoEdit" type="button" disabled>Undo</button>
+        <button class="action-button action-button--save" id="saveEdits" type="button" disabled>Save changes</button>
+      </div>
+      <div class="editor-save" id="saveStatus" role="status">Loading saved edits…</div>
+    </header>
+
+    <aside class="editor-panel">
+      <section class="panel-section" id="instructions">
+        <p class="panel-kicker">HOW TO EDIT</p>
+        <h1 id="modeTitle">Edit text</h1>
+        <p id="modeHelp">Choose a page from the menu above, then click any heading, paragraph, or label in its preview. Save each page independently.</p>
+      </section>
+
+      <section class="panel-section add-project-section" aria-labelledby="addProjectTitle">
+        <p class="panel-kicker">PROJECTS</p>
+        <h2 id="addProjectTitle">Add a project</h2>
+        <p class="panel-note">Add it to Home and Work. You can create its editable details page now or keep it as a listing card only.</p>
+        <form id="addProjectForm" class="add-project-form">
+          <label>Project name<input name="title" type="text" maxlength="90" placeholder="e.g. Horizon Banking" required /></label>
+          <label>Card headline<input name="headline" type="text" maxlength="140" placeholder="Short project headline (optional)" /></label>
+          <label>Category<select name="category"><option value="ux-ui">UX/UI</option><option value="branding">Branding</option><option value="motion-graphics">Motion Graphics</option></select></label>
+          <div class="add-project-form__pair">
+            <label>Scope<input name="scope" type="text" maxlength="80" placeholder="Mobile App" /></label>
+            <label>Year<input name="year" type="text" maxlength="20" placeholder="2026" /></label>
+          </div>
+          <div class="add-project-form__pair">
+            <label>Role<input name="role" type="text" maxlength="80" placeholder="Product Design" /></label>
+            <label>Client<input name="client" type="text" maxlength="80" placeholder="Client name" /></label>
+          </div>
+          <label>Short description<textarea name="summary" rows="3" maxlength="500" placeholder="A short summary for the project card and details page."></textarea></label>
+          <label>Preview image path or URL<input name="image" type="text" maxlength="500" placeholder="/assets/project-image.png" /></label>
+          <label class="add-project-form__checkbox"><input name="detailsPage" type="checkbox" checked /><span>Create a details page</span></label>
+          <button class="add-project-button" type="submit">Add project</button>
+          <p class="add-project-status" id="addProjectStatus" role="status" aria-live="polite"></p>
+        </form>
+      </section>
+
+      <section class="panel-section theme-section">
+        <p class="panel-kicker">SITE COLORS</p>
+        <label class="color-row" for="colorBackground"><span>Page background</span><input id="colorBackground" type="color" value="#0a0a0a" data-variable="--c-bg" /></label>
+        <label class="color-row" for="colorText"><span>Main text</span><input id="colorText" type="color" value="#f0f0f0" data-variable="--c-text" /></label>
+        <label class="color-row" for="colorAccent"><span>Accent</span><input id="colorAccent" type="color" value="#c8c8c8" data-variable="--c-accent" /></label>
+        <label class="color-row" for="colorRaised"><span>Raised surface</span><input id="colorRaised" type="color" value="#141414" data-variable="--c-bg-raised" /></label>
+      </section>
+
+      <section class="panel-section typography-section">
+        <p class="panel-kicker">SELECTED TEXT STYLE</p>
+        <p class="panel-note" id="textStyleHelp">Select Edit text, then click text in the preview to adjust its size and color.</p>
+        <label class="color-row" for="selectedTextColor"><span>Text color</span><input id="selectedTextColor" type="color" value="#ffffff" disabled /></label>
+        <label class="font-size-row" for="selectedFontSize">
+          <span>Font size</span><output id="selectedFontSizeValue">—</output>
+          <input id="selectedFontSize" type="range" min="10" max="144" step="1" value="32" disabled />
+        </label>
+      </section>
+
+      <section class="panel-section spacing-section">
+        <p class="panel-kicker">SPACE BETWEEN SECTIONS</p>
+        <p class="panel-note" id="spacingHelp">Select Section spacing, then click a section in the preview to show its gap control.</p>
+        <div class="spacing-controls" id="spacingControls" hidden></div>
+      </section>
+
+      <section class="panel-section" id="selectedSection">
+        <p class="panel-kicker">SELECTED ELEMENT</p>
+        <p class="selected-element" id="selectedElement">Click an item in the preview to select it.</p>
+      </section>
+
+      <section class="panel-bottom">
+        <button class="reset-button" id="resetEdits" type="button">Reset all edits</button>
+        <p>Use Undo to revert the latest action. Select Save changes when you want to keep your edits.</p>
+      </section>
+    </aside>
+
+    <main class="preview-area">
+      <div class="preview-toolbar"><span>LIVE PREVIEW</span><span>Desktop page</span></div>
+      <iframe id="sitePreview" title="Portfolio live preview"></iframe>
+    </main>
+  </div>
+
+  <input id="mediaPicker" type="file" accept="image/*" hidden />
+  <script type="module" src="/js/visual-editor.js"></script>
+</body>
+</html>

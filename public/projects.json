@@ -1,0 +1,40 @@
+[
+  {
+    "id": "gobyhoms",
+    "title": "GobyHoms",
+    "headline": "Real Estate Mobile App",
+    "category": "ux-ui",
+    "scope": "Mobile App",
+    "role": "UI/UX Design",
+    "client": "Chad",
+    "year": "2025",
+    "summary": "A Real estate portal to manage from customers to agents with accessible of 200+ projects in seamless one platform.",
+    "overview": "A Real estate portal to manage from customers to agents with accessible of 200+ projects in seamless one platform.",
+    "challenge": "Describe the challenge for GobyHoms. Edit this text in the visual editor.",
+    "approach": "Describe the approach for GobyHoms. Edit this text in the visual editor.",
+    "outcome": "Describe the outcome for GobyHoms. Edit this text in the visual editor.",
+    "image": "/assets/7img.webp",
+    "alt": "GobyHoms project preview",
+    "hue": 220,
+    "detailsPage": true
+  },
+  {
+    "id": "kadi",
+    "title": "Kadi",
+    "headline": "Choose a page from the menu above, then click any heading, paragraph, or label in its preview. Save each page independently.",
+    "category": "ux-ui",
+    "scope": "Mobile+Web App",
+    "role": "Product Design",
+    "client": "Josh",
+    "year": "2025",
+    "summary": "Choose a page from the menu above, then click any heading, paragraph, or label in its preview. Save each page independently.",
+    "overview": "Choose a page from the menu above, then click any heading, paragraph, or label in its preview. Save each page independently.",
+    "challenge": "Describe the challenge for Kadi. Edit this text in the visual editor.",
+    "approach": "Describe the approach for Kadi. Edit this text in the visual editor.",
+    "outcome": "Describe the outcome for Kadi. Edit this text in the visual editor.",
+    "image": "/assets/c6.jpg",
+    "alt": "Kadi project preview",
+    "hue": 220,
+    "detailsPage": true
+  }
+]

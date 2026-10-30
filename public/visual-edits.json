@@ -1,0 +1,11 @@
+{
+  "text": {
+    "#nav > div.nav__inner > a.nav__logo": "Alex M"
+  },
+  "media": {},
+  "theme": {},
+  "spacing": {
+    "#hero": 40,
+    "section.showcase-banner:nth-of-type(2)": -36
+  }
+}
